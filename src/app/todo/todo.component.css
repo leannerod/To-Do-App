@@ -1,0 +1,17 @@
+.completed {
+    text-decoration: line-through;
+}
+
+.complete-btn {
+    background-color: white;
+    border: #ff69b4 solid 1px;
+    border-radius: 4px;
+    color: #ff69b4;
+    padding: 2px;
+}
+
+.x-button {
+    border: none;
+    background-color: white;
+    float: right;
+}

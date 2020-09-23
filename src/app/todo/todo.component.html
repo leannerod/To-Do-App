@@ -1,0 +1,7 @@
+<li>
+    <button class="complete-btn" *ngIf="isNotCompleted">Complete</button>
+    <span [ngClass]="{'completed' : !isNotCompleted}">
+        {{todoItem.task}}
+    </span>
+    <button class="x-button">X</button>
+</li>

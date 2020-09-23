@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { todos } from './mock-todos';
+import { Todo } from "./todo";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Todo-app';
+  constructor() {}
+  
+    title = 'TODO List';
+    todoList: Todo[] = todos;
+
+  add() {
+    console.log('clicked');
+  }
 }
