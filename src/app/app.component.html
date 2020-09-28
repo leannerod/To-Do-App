@@ -1,10 +1,1 @@
-<div class="todo-box">
-  <h2>{{title}}</h2>
-  <p>A place to store your todos</p>
-  <input type="text" placeholder="Filter your to-dos">
-  <ol>
-    <todo-item *ngFor="let todo of todoList" [todoItem]="todo"></todo-item>
-  </ol>
-  <input type="text" placeholder="Add your to-do">
-  <button class="add-button" (click)="add()">Add</button>
-</div>
+<todo-list></todo-list>

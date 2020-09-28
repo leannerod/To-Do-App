@@ -3,18 +3,19 @@ import { Todo } from "./todo";
 export const todos: Todo[] = [
     {
         task: "laundry",
-        completed: false
+        completed: false,
     },
     {
         task: "dishes",
-        completed: false
+        completed: false,
     },
     {
         task: "answer emails",
-        completed: false
+        completed: false,
     },
     {
         task: "pet cat",
-        completed: true
+        completed: true,
     }
 ]
+

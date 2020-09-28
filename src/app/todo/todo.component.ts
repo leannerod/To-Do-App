@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { todos } from './../mock-todos';
+import { Todo } from './../todo';
 
 @Component({
   selector: 'todo-item',
@@ -8,6 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TodoComponent implements OnInit {
   @Input() todoItem;
   isNotCompleted: boolean = true;
+  todoList: [];
 
   constructor() {}
 
@@ -15,4 +18,15 @@ export class TodoComponent implements OnInit {
     this.isNotCompleted = !this.todoItem.completed;
   }
 
+  // removeTask(): void {
+  //  this.todoList.task($key);
+  //   }        
+
+  completeTask(): void {
+    this.isNotCompleted = this.todoList.completed;
+  }
 }
+
+
+
+
