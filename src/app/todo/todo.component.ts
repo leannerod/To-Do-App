@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { todos } from './../mock-todos';
 import { Todo } from './../todo';
 
@@ -9,6 +9,7 @@ import { Todo } from './../todo';
 })
 export class TodoComponent implements OnInit {
   @Input() todoItem;
+  @Output() remove = new EventEmitter<void>();
   isNotCompleted: boolean = true;
   todoList: [];
 
@@ -18,13 +19,14 @@ export class TodoComponent implements OnInit {
     this.isNotCompleted = !this.todoItem.completed;
   }
 
-  // removeTask(): void {
-  //  this.todoList.task($key);
-  //   }        
-
-  completeTask(): void {
-    this.isNotCompleted = this.todoList.completed;
+completeTask(): void {
+  this.todoItem.completed = true;
+}
+  
+  removeTask(item): void {
+    this.remove.emit(item);
   }
+
 }
 
 
